@@ -35,6 +35,16 @@ public class Obfuscolor {
         String imgPath = args[0];
         String writePath = args[1];
         
+        String extension = "";
+        
+        if(!writePath.contains(".")) {
+            System.out.println("The write file must have an extension!");
+            System.exit(0);
+        }
+        else {
+            extension = writePath.substring(writePath.lastIndexOf(".") + 1);
+        }
+        
         BufferedImage base = null;
         
         try {
@@ -50,7 +60,8 @@ public class Obfuscolor {
             }
         }
         try {
-            ImageIO.write(base, "PNG", new File(writePath));
+            
+            ImageIO.write(base, extension, new File(writePath));
         } catch (IOException e) {
             System.out.println("Error writing obfuscated file! " + e.getLocalizedMessage());
             System.exit(0);
