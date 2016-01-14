@@ -25,7 +25,9 @@ public class Obfuscolor {
                     + "to prevent usage of basic fill algorithms.\n\n"
                     + "Specify the path to read the image from as the first "
                     + "argument and the path to write the image to as the second argument.\n\n"
-                    + "Obfuscolor outputs files in PNG format.");
+                    + "Obfuscolor works best when it writes PNG files. Images stored with lossy "
+                    + "compression algorithms will not work very well with Obfuscolor and largely prevent"
+                    + "its effectiveness.");
             System.exit(0);
         }
         if(args.length < 2) {
