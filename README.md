@@ -9,7 +9,7 @@ In the example folder are two images - base.png and nofill.png. base.png is a si
 ### Usage
 Obfuscolor is used simply with `java -jar Obfuscolor.jar <path to original image> <path to modified image>`.
 
-As of now, the modified image is always saved in PNG format, so if a different file type is specified, it will not actually be taken into account - the file will be saved in the PNG format anyways. This may be fixed in the future.
+Obfuscolor works best with PNG images. This is because PNG maintains all data of an original image file. Lossy compression algorithms, such as JPEG compression algorithms, highly reduce the effectiveness of Obfuscolor.
 
 `java -jar Obfuscolor.jar help` will display simple information about the program.
 
